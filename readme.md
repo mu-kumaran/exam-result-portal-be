@@ -1,0 +1,2 @@
+It is a backend project of Exam Result portal created using MERN stack. 
+Tools used for backend: Node.js, MongoDB (Mongoose library) and MongoDB Atlas for server database
