@@ -1,9 +1,10 @@
 var http = require("http")
 var url = require("url")
-// var sdb = require("./serverdatabase")
-var sdb = require("./server-db")
+var sdb = require("./server-cloud")
+// var sdb = require("./server-db")
+require('dotenv').config()
 
-
+const port = process.env.PORT || 3000
 http.createServer(async (req,res)=>{
     console.log("react-view to server controller")
 
@@ -39,5 +40,5 @@ http.createServer(async (req,res)=>{
         console.log("program end")
         res.end()
     }
-}).listen(1234)
-console.log("port listening at 1234")
+}).listen(port)
+console.log(`port listening at ${port}`)
