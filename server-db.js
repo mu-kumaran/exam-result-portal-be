@@ -14,7 +14,12 @@ async function finddata(inputdata)
     try{  
         const dataset = await User.find(inputdata)
         console.log("From mongoose:",dataset)
+        
+        //Use this syntax for http, url server request
         return JSON.stringify(dataset)
+    
+        // Use this syntax for express JS server
+        // return dataset.map(doc => doc.toObject())   
     }
     catch(err){
         console.log("Error",err.tostring())
