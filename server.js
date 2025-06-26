@@ -18,7 +18,7 @@ app.use(express.urlencoded({extended:true}));
 app.get("/api/find", async (req, res) => {
   const { rno, dob } = req.query;
 
-  console.log("Request received from React:");
+  console.log("Request received from React/client UI:");
   console.log("rno:", rno, "dob:", dob);
 
   try {
